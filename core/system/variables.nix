@@ -1,12 +1,12 @@
 {
   # System Information
-  username = "John";
+  username = "matteo";
   keyMap = "at";
 
   # Theme
   colorScheme = "gruvbox-dark-soft";
   polarity = "dark";
-  opacity = "1.0";
+  opacity = "0.7";
 
   # Hyprland
   resolution = "1920x1080@60";
@@ -18,8 +18,8 @@
   wallpaperPath = ".wallpapers/house-painting.png"; # From ~/
 
   # Git Configuration
-  gitUser = "JohnDoe";
-  gitMail = "John@example.com";
+  gitUser = "Permafrozen";
+  gitMail = "m8tt8o@gmail.com";
   defaultBranch = "main";
 
 }
