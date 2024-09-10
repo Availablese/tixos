@@ -19,7 +19,7 @@
 
   # Git Configuration
   gitUser = "GluttonMain";
-  gitMail = "example@gmail.com";
+  gitMail = "frozenkill.hd@gmail.com";
   defaultBranch = "main";
 
 }
