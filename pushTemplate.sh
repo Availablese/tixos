@@ -65,7 +65,7 @@ fi
 
 # Stage the change and commit with the provided message
 git add "$VARIABLES_FILE"
-if ! git commit -m "pushed template file"; then
+if ! git commit --alow-empty -m "pushed template file"; then
   echo "Error: Failed to create a commit with the message: pushed template file"
   # Restore the backup in case of failure
   cp "${VARIABLES_FILE}.bak" "$VARIABLES_FILE"
