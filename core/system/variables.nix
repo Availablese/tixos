@@ -1,25 +1,25 @@
 {
   # System Information
-  username = "timo";
+  username = "John";
   keyMap = "at";
 
   # Theme
   colorScheme = "gruvbox-dark-soft";
   polarity = "dark";
-  opacity = "0.7";
+  opacity = "1.0";
 
   # Hyprland
-  resolution = "2560x1600@60";
+  resolution = "1920x1080@60";
   terminal = "kitty";
   browser = "qutebrowser";
   fileManager = "dolphin";
 
   # Hyprpaper (Wallpaper)
-  wallpaperPath = ".wallpapers/nixos.png"; # From ~/
+  wallpaperPath = ".wallpapers/house-painting.png"; # From ~/
 
   # Git Configuration
-  gitUser = "GluttonMain";
-  gitMail = "frozenkill.hd@gmail.com";
+  gitUser = "JohnDoe";
+  gitMail = "John@example.com";
   defaultBranch = "main";
 
 }
