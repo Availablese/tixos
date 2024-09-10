@@ -45,18 +45,6 @@ if [[ -z "$SETTINGS_TO_USE" ]]; then
   usage
 fi
 
-# Backup the current variables file
-if ! cp "$VARIABLES_FILE" "${VARIABLES_FILE}.bak"; then
-  echo "Error: Failed to create a backup of $VARIABLES_FILE"
-  exit 1
-fi
-
-# Backup the current hardware configuration file
-if ! cp "$CORE_HW_FILE" "${CORE_HW_FILE}.bak"; then
-  echo "Error: Failed to create a backup of $CORE_HW_FILE"
-  exit 1
-fi
-
 # Copy the template file into variables.nix
 if ! cp "$TEMPLATE_FILE" "$VARIABLES_FILE"; then
   echo "Error: Failed to copy $TEMPLATE_FILE to $VARIABLES_FILE"
@@ -67,16 +55,12 @@ fi
 git add "$VARIABLES_FILE"
 if ! git commit --allow-empty -m "pushed template file"; then
   echo "Error: Failed to create a commit with the message: pushed template file"
-  # Restore the backup in case of failure
-  cp "${VARIABLES_FILE}.bak" "$VARIABLES_FILE"
   exit 1
 fi
 
 # Push the changes
 if ! git push; then
   echo "Error: Failed to push the changes to the remote repository"
-  # Restore the backup in case of failure
-  cp "${VARIABLES_FILE}.bak" "$VARIABLES_FILE"
   exit 1
 fi
 
@@ -100,9 +84,5 @@ if [[ -n $(git status --porcelain) ]]; then
     exit 1
   fi
 fi
-
-# Clean up the backup files
-rm -f "${VARIABLES_FILE}.bak"
-rm -f "${CORE_HW_FILE}.bak"
 
 echo "Push completed successfully and configuration restored to $SETTINGS_TO_USE."
