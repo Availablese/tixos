@@ -9,3 +9,5 @@ git commit -m "$msg"
 
 read -p 'Repository: ' repo
 git push -u $repo unstable
+
+~/.modular-nixos-configuration/bash/userQuery.sh
