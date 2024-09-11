@@ -8,6 +8,7 @@ read -p 'Message: ' msg
 git commit -m "$msg"
 
 read -p 'Repository: ' repo
-git push -u $repo unstable
+read -p 'Branch: ' branch
+git push -u $repo $branch
 
 ~/.modular-nixos-configuration/bash/userQuery.sh
