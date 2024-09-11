@@ -1,7 +1,8 @@
 { config, lib, pkgs, ...}:
 
 let
-  vars = import ../../../../core/system/variables.nix;
+  user = import ../../../../users/user.nix;
+  vars = import ../../../../users/${user.user}/variables.nix;
 in {
 
   environment.systemPackages = with pkgs; [

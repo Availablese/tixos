@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 
 let
-  vars = import ./variables.nix;
+  user = import ../../users/user.nix;
+  vars = import ../../users/${user.user}/variables.nix;
 in
 {
   imports = [
-    ../hardware/hardware-configuration.nix
+    ../../users/${user.user}/hardware-configuration.nix
     ../host/laptop.nix
   ];
 

@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 
 let
-  vars = import ./variables.nix;
+  user = import ../../users/user.nix; 
+  vars = import ../../users/${user.user}/variables.nix;
 in
 {
   # Information what to manage

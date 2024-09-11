@@ -1,7 +1,8 @@
 { pkgs, ...}:
 
 let
-  vars = import ../../../core/system/variables.nix;
+  user = import ../../../users/user.nix;
+  vars = import ../../../users/${user.user}/variables.nix;
 in
 {
   environment.systemPackages = with pkgs; [
@@ -21,7 +22,7 @@ in
       terminal = "${vars.opacity}";
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/${vars.colorScheme}.yaml";
+     base16Scheme = "${pkgs.base16-schemes}/share/themes/${vars.colorScheme}.yaml";
 
   };
 
@@ -50,7 +51,7 @@ in
 
       };
 
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/${vars.colorScheme}.yaml";
+       base16Scheme = "${pkgs.base16-schemes}/share/themes/${vars.colorScheme}.yaml";
 
     };
   }];

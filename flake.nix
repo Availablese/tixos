@@ -13,7 +13,8 @@
 
   outputs = inputs@{ nixpkgs, home-manager, stylix, ...}:
     let
-      vars = import ./core/system/variables.nix;
+      user = import ./users/user.nix;
+      vars = import ./users/${user.user}/variables.nix;
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system}; #package architecture for homemanager
