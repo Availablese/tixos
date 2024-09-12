@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
 if [ "$1" = "--help" ]; then
-    echo "git-push.sh <user> <msg> <repo> <branch>"
+    echo "git-push.sh -> <user> -> <msg> -> <repo> -> <branch>"
 fi
 if [ "$1" = "timo" ] || [ "$1" = "matteo" ]; then 
     rm -f ~/.modular-nixos-configuration/users/user.nix 
