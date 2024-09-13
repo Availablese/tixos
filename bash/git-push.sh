@@ -13,4 +13,6 @@ if [ "$1" = "timo" ] || [ "$1" = "matteo" ]; then
     git push -u $3 $4
     
     ~/.modular-nixos-configuration/bash/userQuery.sh $1
+
+    git add -A
 fi
