@@ -19,7 +19,7 @@ in {
         c.colors.webpage.preferred_color_scheme = "dark"
 
         c.window.transparent = True
-	c.content.pdfjs = True
+	c.content.pdf.js = True
 
         base00 = "rgba(${config.lib.stylix.colors.base00-rgb-r}, ${config.lib.stylix.colors.base00-rgb-g}, ${config.lib.stylix.colors.base00-rgb-b}, ${vars.opacity})"
         base01 = "rgba(${config.lib.stylix.colors.base01-rgb-r}, ${config.lib.stylix.colors.base01-rgb-g}, ${config.lib.stylix.colors.base01-rgb-b}, ${vars.opacity})"
